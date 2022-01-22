@@ -1,0 +1,15 @@
+{
+  "name": "personalityFit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Cornelius Suermann",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.2.27"
+  }
+}
