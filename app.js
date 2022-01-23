@@ -37,12 +37,13 @@ const app = new Vue({
     activePage: 0,
     selectedCard: 'p0',
     pages: [
-      [{ id: 'c0', title: 'connecting...' }],
+      [{ id: 'c0', title: 'please wait...' }],
       [
         { id: 'p1', title: 'Challenging Tasks' },
         { id: 'p2', title: 'Diversity' },
         { id: 'p3', title: 'Teamwork' },
         { id: 'p4', title: 'Autonomy' },
+        { id: 'p4', title: 'Growth' },
       ],
       [
         { id: 'n1', title: 'Routine' },

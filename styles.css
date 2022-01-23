@@ -1,4 +1,4 @@
-.demo {
+/* .demo {
   font-family: sans-serif;
   border: 1px solid #eee;
   border-radius: 2px;
@@ -7,28 +7,32 @@
   margin-bottom: 40px;
   user-select: none;
   overflow-x: auto;
-}
+} */
 
 .container {
-  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 5rem;
 }
 
 .draggable-item {
   flex-direction: row !important;
   font-family: sans-serif;
-  justify-content: space-between;
+  font-size: 4vw;
   text-align: center;
   background-color: white;
   border: 1px solid #597ba0aa;
   border-left: 5px solid gray;
-  margin: 10px;
-  padding: 3rem 0;
+  margin: 1rem 0rem;
+  padding: 3rem 1rem;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 2rem;
-  width: 30rem;
+  min-width: 50%;
+}
+
+.dndrop-container.vertical > .dndrop-draggable-wrapper {
+  overflow: initial;
+  width: 100%;
 }
 
 .p0 .draggable-item {
