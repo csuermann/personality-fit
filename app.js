@@ -36,6 +36,13 @@ const app = new Vue({
   data: {
     activePage: 0,
     selectedCard: 'p0',
+    options: [
+      { text: 'please wait', value: 0 },
+      { text: 'positive aspects', value: 1 },
+      { text: 'negative aspects', value: 2 },
+      { text: 'engineering role', value: 3 },
+      { text: 'staff engineering role', value: 4 },
+    ],
     pages: [
       [{ id: 'c0', title: 'please wait...' }],
       [
@@ -43,7 +50,7 @@ const app = new Vue({
         { id: 'p2', title: 'Diversity' },
         { id: 'p3', title: 'Teamwork' },
         { id: 'p4', title: 'Autonomy' },
-        { id: 'p4', title: 'Growth' },
+        { id: 'p5', title: 'Growth' },
       ],
       [
         { id: 'n1', title: 'Routine' },
@@ -51,15 +58,23 @@ const app = new Vue({
         { id: 'n3', title: 'Unclear Requirements' },
         { id: 'n4', title: 'Micro-Management' },
         { id: 'n5', title: 'Lack of Transparency' },
-        { id: 'n6', title: 'Toxicity' },
       ],
       [
-        { id: 'r1', title: 'Open Source' },
-        { id: 'r2', title: 'Mentoring' },
-        { id: 'r3', title: 'Testing' },
-        { id: 'r4', title: 'Clean Code' },
-        { id: 'r5', title: 'Architecture' },
-        { id: 'r6', title: 'Leverage' },
+        { id: 'er1', title: 'Open Source' },
+        { id: 'er2', title: 'Mentoring' },
+        { id: 'er3', title: 'Testing' },
+        { id: 'er4', title: 'Clean Code' },
+        { id: 'er5', title: 'Tech Debt' },
+        { id: 'er6', title: 'Architecture' },
+      ],
+      [
+        { id: 'ser1', title: 'Mentoring' },
+        { id: 'ser2', title: 'Testing' },
+        { id: 'ser3', title: 'Clean Code' },
+        { id: 'ser4', title: 'Tech Debt' },
+        { id: 'ser5', title: 'Architecture' },
+        { id: 'ser6', title: 'Leverage' },
+        { id: 'ser7', title: 'Innovation' },
       ],
     ],
   },
@@ -94,10 +109,13 @@ const app = new Vue({
     isAdmin() {
       return window.location.href.includes('admin');
     },
-    changePage(delta) {
-      this.activePage += delta;
+    changePage() {
       channel.trigger('client-page-changed', { pageIndex: this.activePage });
     },
+    // changePage(delta) {
+    //   this.activePage += delta;
+    //   channel.trigger('client-page-changed', { pageIndex: this.activePage });
+    // },
     getChildPayload(index) {
       return {
         pageIndex: this.activePage,

@@ -15,6 +15,13 @@
 
   <body>
     <div id="app" class="demo">
+      <div v-if="isAdmin()" class="admin">
+        <select @change="changePage" v-model="activePage">
+          <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
+          </option>
+        </select>
+      </div>
       <div class="container" v-bind:class="'p' + activePage">
         <Container
           :remove-on-drop-out="false"
@@ -32,17 +39,6 @@
             </div>
           </Draggable>
         </Container>
-      </div>
-      <div v-if="isAdmin()" class="buttons">
-        <button :disabled="activePage == 0" @click="changePage(-1)">
-          &lt;&lt;
-        </button>
-        <button
-          :disabled="activePage == numberOfPages - 1"
-          @click="changePage(1)"
-        >
-          &gt;&gt;
-        </button>
       </div>
     </div>
 

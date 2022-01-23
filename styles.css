@@ -51,7 +51,8 @@
   background-color: #ff9e70;
 }
 
-.p3 .draggable-item {
+.p3 .draggable-item,
+.p4 .draggable-item {
   border-left: 15px solid #0202c9;
   background-color: #8888ff;
 }
@@ -64,7 +65,7 @@
   filter: brightness(80%);
 }
 
-.buttons {
+.admin {
   display: flex;
   justify-content: center;
   align-items: center;
