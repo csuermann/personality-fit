@@ -13,7 +13,7 @@
   border: 1px solid #597ba0aa;
   border-left: 5px solid gray;
   margin: 1rem 0rem;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   cursor: pointer;
   border-radius: 5px;
   min-width: 50%;
@@ -59,10 +59,4 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-}
-
-button {
-  margin: 0.5rem;
-  width: 7rem;
-  height: 2rem;
 }
