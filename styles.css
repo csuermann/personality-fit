@@ -31,23 +31,33 @@
   width: 30rem;
 }
 
-.p0 {
+.p0 .draggable-item {
+  border: 15px solid #ffffff;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.p1 .draggable-item {
   border-left: 15px solid #42b883;
   background-color: #9dd19d;
 }
 
-.p1 {
+.p2 .draggable-item {
   border-left: 15px solid red;
   background-color: #ff9e70;
 }
 
-.p2 {
+.p3 .draggable-item {
   border-left: 15px solid #0202c9;
   background-color: #8888ff;
 }
 
 .dragging {
   filter: brightness(110%);
+}
+
+.selected {
+  filter: brightness(80%);
 }
 
 .buttons {
