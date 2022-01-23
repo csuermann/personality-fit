@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <div id="app" class="demo">
+    <div id="app">
       <div v-if="isAdmin()" class="admin">
         <select @change="changePage" v-model="activePage">
           <option v-for="option in options" v-bind:value="option.value">
