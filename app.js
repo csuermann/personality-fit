@@ -42,6 +42,7 @@ const app = new Vue({
       { text: 'negative aspects', value: 2 },
       { text: 'engineering role', value: 3 },
       { text: 'staff engineering role', value: 4 },
+      { text: 'devops engineering role', value: 5 },
     ],
     pages: [
       [{ id: 'c0', title: 'please wait...' }],
@@ -75,6 +76,14 @@ const app = new Vue({
         { id: 'ser5', title: 'Architecture' },
         { id: 'ser6', title: 'Leverage' },
         { id: 'ser7', title: 'Innovation' },
+      ],
+      [
+        { id: 'do1', title: 'Automation' },
+        { id: 'do2', title: 'CI/CD' },
+        { id: 'do3', title: 'Collaboration' },
+        { id: 'do4', title: 'Continuous improvement' },
+        { id: 'do5', title: 'Monitoring' },
+        { id: 'do6', title: 'SLA' },
       ],
     ],
   },
