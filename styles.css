@@ -41,7 +41,8 @@
 }
 
 .p3 .draggable-item,
-.p4 .draggable-item {
+.p4 .draggable-item,
+.p5 .draggable-item {
   border-left: 15px solid #0202c9;
   background-color: #8888ff;
 }
